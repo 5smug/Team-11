@@ -1,5 +1,5 @@
-# Problem Statement
-The **open source bristol data website**, is a brand-new website designed and created with the purpose of making searching for information, values, and needs faster with better security for both searching and protecting your privacy.
+### Problem Statement
+The **open source bristol data website**, is a brand-new website designed and created with the purpose of making searching for information, values, and needs faster with better security for both searching and protecting your privacy. In this website, you can access for most things (at the start, after release there will be more) and get full information about the said product. If you search for something as "car" which has a drivable model, and a toy model, you will get multiple searches. You will also have buttons that can select only the "toy version" or the "drivable version".
 
 # Benefits
 This benefits not only us, the creators of the **open source bristol data website**, but also the people that are going to search for a website like this. Even if its just a few times a year, this website could benefit a lot of people.
