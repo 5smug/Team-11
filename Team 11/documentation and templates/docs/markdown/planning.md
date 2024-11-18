@@ -8,7 +8,7 @@ This benefits not only us, the creators of the **open source bristol data websit
 The perks are simple, use the google.com search engine for the needed answers, implement them to said search, and find a fast solution to simple problems. One of the another perks is that we can **create an enviroment** where users won't take long to achieve their needed answers.
 
 # Costs
-The money will be spend on first and most imporntatly...
+Our buget costs are going to be mainly focused on the perfomance and quality of online servers for the maintenance and running of the website. On the side, we will also be using the budget to buy needed rights, a domain, and others.
 
 # Risks
 Our risks constrast into...
