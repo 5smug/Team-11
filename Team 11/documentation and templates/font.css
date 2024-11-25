@@ -1,0 +1,16 @@
+ /* <uniquifier>: Use a unique and descriptive class name */
+ /* <weight>: Use a value from 300 to 800 */
+#font-html {
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.material-icons {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}

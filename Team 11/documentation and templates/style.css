@@ -1,0 +1,24 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    font-size:x-large; 
+    font-family:sans-serif; 
+}
+
+#search {
+    float:right;
+}
+
+.negru {
+    color:black;
+}
+
+.gold {
+    background-color: gold;
+}
+.padded {
+    padding: 20px 10px;
+}
