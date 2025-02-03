@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS links. One goes to the actual css that enhances the webiste looks, one go to font, changing the looks of text and adding icons. -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bike Pump Finder</title>
+    
+    <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font.css">
-    <!-- Implementation of font - from google fonts. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"/>
 
-    <!-- Title of webpage -->
-    <title>Skibidi</title>
-</head>
-<!-- -->
-<body>
-    <!-- Actual html code. -->
-    <header class="gold padded">
-        <span style="font-family:'Roboto', sans-serif;"><a class="negru">Bike pump Finder</a></span>
-        <span id="search"><input type="text" placeholder="Search.."/>
-        <button><i class="material-icons" style="font-size:12pt">search</i></span></button>
-    </header>
-</body>
-<!-- End of html code -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+  </head>  
+  <body>
+    <div class="grid-container">
+      <header>
+        <span class="heading">Bike Pump Finder</span>
+        <form class="search" action="index.html">
+          <input name="searchterm" placeholder="Search.." type="text" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </header>
+      <nav>
+        <button onclick="location.href='map.html'" class="w3-button w3-block w3-blue">Find nearest</button>
+        <button onclick="location.href='index.html'" class="w3-button w3-block w3-blue">Find by type</button>
+      </nav>
+      <main id="single" show="first">
+        <div id="first">
+          <div class="w3-bar">
+            <button class="w3-bar-item w3-button w3-ripple w3-grey">Bike Pump &amp; Tool Station</button>
+            <button onclick="document.getElementById('single').setAttribute('show','second')" 
+            class="w3-bar-item w3-button w3-ripple w3-black">Bike Tool Station</button>
+            <button onclick="document.getElementById('single').setAttribute('show','third')" class="w3-bar-item w3-button w3-ripple w3-black">On street bike pump</button>
+          </div>
+          <div id="Bike Pump & Tool Station">
+            <iframe src="https://arcg.is/LXXm80" width="800" height="600" frameborder="0"></iframe>
+          </div>
+        </div>
+        <div id="second">
+          <div class="w3-bar">
+            <button onclick="document.getElementById('single').setAttribute('show','first')" class="w3-bar-item w3-button w3-ripple w3-black">Bike Pump &amp; Tool Station</button>
+            <button class="w3-bar-item w3-button w3-ripple w3-grey">Bike Tool Station</button>
+            <button onclick="document.getElementById('single').setAttribute('show','third')" class="w3-bar-item w3-button w3-ripple w3-black">On street bike pump</button>
+          </div>
+          <div id="Bike Pump & Tool Station">
+            <iframe src="https://arcg.is/44Ce50" width="800" height="600" frameborder="0"></iframe>
+          </div>
+        </div>
+        <div id="third">
+          <div class="w3-bar">
+            <button onclick="document.getElementById('single').setAttribute('show','first')" class="w3-bar-item w3-button w3-ripple w3-black">Bike Pump &amp; Tool Station</button>
+            <button onclick="document.getElementById('single').setAttribute('show','second')" class="w3-bar-item w3-button w3-ripple w3-grey">Bike Tool Station</button>
+            <button class="w3-bar-item w3-button w3-ripple w3-black">On street bike pump</button>
+          </div>
+          <div id="Bike Pump & Tool Station">
+            <iframe src="https://arcg.is/qXnCS" width="800" height="600" frameborder="0"></iframe>        
+          </div>
+        </div>
+     </main>
+    </div>
+  </body>
 </html>
