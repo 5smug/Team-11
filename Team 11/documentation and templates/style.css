@@ -1,24 +1,48 @@
+/* CSS files add styling rules to your content */
+
 body {
+    font-family: 'Roboto', sans-serif;
+    margin: 2em;
     background-color: black;
     color: white;
 }
-
+  
+h1 {
+    font-style: italic;
+    color: #373fff;
+}
+  
+.grid-container { 
+    display: grid; 
+    grid-template-areas:
+      'ph ph ph ph ph'
+      'ln cn cn cn cn'
+      'ln cn cn cn cn'
+    ;
+}
+  
 header {
-    font-size:x-large; 
-    font-family:sans-serif; 
+    grid-area: ph;
+    padding:20px 10px;
+    background-image: url('bike-wash.png');
+    background-attachment: fixed;
 }
+  
+nav { grid-area: ln }
 
-#search {
-    float:right;
-}
+main { grid-area: cn }
 
-.negru {
-    color:black;
-}
+.heading { font-family: 'Roboto Mono', monospace; font-size:x-large; }
+.search { float:right }
 
-.gold {
-    background-color: gold;
-}
-.padded {
-    padding: 20px 10px;
-}
+#first { display:none }
+#single[show="first"] > 
+#first { display:block }
+
+#second { display:none }
+#single[show="second"] > 
+#second { display:block }
+
+#third { display:none }
+#single[show="third"] > 
+#third { display:block }
