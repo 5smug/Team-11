@@ -1,4 +1,4 @@
-# Problem Description
+# Problem Statement
 A major issue is resolved by the **Bristol Education Data Portal**: **finding accurate, up-to-date information about schools in Bristol and surrounding areas is frustratingly scattered.** Parents, students, and researchers currently juggle council websites, Ofsted reports, and word-of-mouth recommendations.
 
 All of this is combined on our website into **one user-friendly platform** where users can: **Search primary/secondary schools and colleges** by location (e.g., Bristol, Cardiff, Gloucester, etc.). Addresses, the official website of the school or college, and embedded maps are all available for instant access. **Compare institutions** without requiring the user to open more than ten tabs in their browser.
