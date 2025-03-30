@@ -1,6 +1,6 @@
-## Project Structure
+# Project Structure
 
-# Main Folder/
+## Main Folder/
 
 - **Code for website (Folder)/**
   - style (Folder)/
