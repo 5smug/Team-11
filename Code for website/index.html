@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      function query() {
+        let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/boundaries/FeatureServer/0/query?where=1%3D1&outFields=NAME,AREA_CODE,LA_PERIMETER,LA_AREA,MAPS_SITE&outSR=4326&f=json"
+        fetch(url, { method: "GET", headers: { Accept: "application/json"}})
+        .then(res=>res.json())
+        .then(console.log);
+      }
+    </script>
+    <script>query()</script>
+</body>
+</html>
