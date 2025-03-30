@@ -1,9 +1,5 @@
 # Project Proposal
-
-
 ## Business Case
-
-
 ### Problem Statement
 
 
