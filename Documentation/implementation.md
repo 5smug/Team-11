@@ -22,13 +22,13 @@
 
 **Main Folder/**
 
- # Code for website (Folder)/**
+ * Code for website (Folder)/
   - style (Folder)/
     - script.js
     - style.css
   - index.html
 
- # Documentation (Folder)/**
+* Documentation (Folder)/**
   - design.md
   - implementation.md
   - planning.md
