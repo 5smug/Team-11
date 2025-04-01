@@ -20,7 +20,8 @@
 
 # Project Structure
 
-* Main Folder/
+**Main Folder/**
+
  - Code for website (Folder)/
    - style (Folder)/
      - script.js
