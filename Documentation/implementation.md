@@ -20,20 +20,20 @@
 
 # Project Structure
 
-**Main Folder/**
+* Main Folder/
 
  * Code for website (Folder)/
-  - style (Folder)/
-    - script.js
-    - style.css
-  - index.html
+   - style (Folder)/
+     - script.js
+     - style.css
+   - index.html
 
 * Documentation (Folder)/**
-  - design.md
-  - implementation.md
-  - planning.md
-  - requirements.md
-  - testing.md
+   - design.md
+   - implementation.md
+   - planning.md
+   - requirements.md
+   - testing.md
 
 # Software Architecture
 
