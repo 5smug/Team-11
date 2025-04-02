@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/style.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="style/script.js"></script>
 </head>
 <body>
-    <script>
-      function query() {
-        let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/boundaries/FeatureServer/0/query?where=1%3D1&outFields=NAME,AREA_CODE,LA_PERIMETER,LA_AREA,MAPS_SITE&outSR=4326&f=json"
-        fetch(url, { method: "GET", headers: { Accept: "application/json"}})
-        .then(res=>res.json())
-        .then(console.log);
-      }
-    </script>
-    <script>query()</script>
+    <div class="overlay-container">
+        <header class="main-header">
+            <h1>Welcome</h1>
+            <p class="dataset">Bristol Local Authorities</p>
+        </header>
+
+        <main class="content-class">
+            <div class="container">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <div class="location-controls">
+                    <button class="location-btn">Set a location</button>
+                    <button class="reset-btn">Reset</button>
+                </div>
+            </div>
+            
+            <div id="map-container" class="map-container">
+                <div id="map"></div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <p>Public email: <a href="mailto:opendata@bristol.gov.uk">opendata@bristol.gov.uk</a></p>
+        </footer>
+    </div>
 </body>
 </html>
