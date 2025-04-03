@@ -4,35 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- css modules -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="style/style.css">
+    <!-- script modules -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="style/script.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
+    <!-- This is the header, no map appears or buttons. -->
     <div class="overlay-container">
-        <header class="main-header">
-            <h1>Welcome</h1>
-            <p class="dataset">Local Authorities</p>
-        </header>
+        <div class="header-container">
+            <header class="main-header">
+                <h1>Welcome to our website!</h1>
+                <p class="dataset">Local Authorities</p>
+            </header>
+        </div>
 
+        <!-- Search bar, buttons, and map display functionalities. -->
         <main class="content-class">
             <div class="container">
-                <input type="text" placeholder="Search..." class="search-bar">
+                <div class="search-container">
+                    <!-- This is where the input is made for the search bar. -->
+                    <input type="text" placeholder="Search for a location..." class="search-bar">
+                </div>
+                <!-- This is where the input is made for the buttons. -->
                 <div class="location-controls">
-                    <button class="location-btn">Set a location</button>
-                    <button class="reset-btn">Reset</button>
+                    <button class="location-btn">Set Location</button>
+                    <button class="reset-btn">Reset Map</button>
                 </div>
             </div>
-            
+            <!-- This is where the input is made for the map. -->
             <div id="map-container" class="map-container">
                 <div id="map"></div>
             </div>
         </main>
-
+        <!-- Enquiries user to ask for help if needed. -->
         <footer class="main-footer">
-            <p>Public email: <a href="mailto:opendata@bristol.gov.uk">opendata@bristol.gov.uk</a></p>
+            <p>Do you have any questions? Contact us at <a href="mailto:opendata@bristol.gov.uk">opendata@bristol.gov.uk</a></p>
         </footer>
     </div>
 </body>
