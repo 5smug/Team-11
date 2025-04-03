@@ -1,18 +1,29 @@
+/* Root made for colours usage. Instead of thinking for colours, made them a set so that these are the only colours used. */
 :root{
     --primary: #1a73e8;
     --primary-dark: #0d5dba;
+    --primary-light: #e8f0fe;
     --text: #202124;
     --text-light: #5f6368;
+    --text-lighter: #80868b;
     --border: #dadce0;
+    --border-dark: #c4c7c5;
     --background: #f8f9fa;
+    --white: #ffffff;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+/* Made to overwrite anything, giving the default a margin of 0, and a border-box for the entire html code to be placed in. */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* The default body inside of "*" */
 body{
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: var(--background);
@@ -22,121 +33,206 @@ body{
     min-height: 100vh;
 }
 
+/* Main frame displayed at the top for known actions. */
 .overlay-container{
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 40px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    min-height: 80vh;
+}
+
+.header-container{
+    background: var(--primary);
+    color: var(--white);
+    padding: 30px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-container::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
 }
 
 .main-header{
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 1;
+    text-align: left;
 }
 
 .main-header h1{
-    font-size: 40px;
-    font-weight: 300;
-    margin-bottom: 10px;
-    color: var(--text);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
 }
 
 .dataset{
-    color: var(--text-light);
-    font-size: 17.6px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 400;
 }
 
+/* Container for map, search bar and buttons. */
 .content-class{
     display: flex;
     flex-direction: column;
+    flex: 1;
+    padding: 30px 40px;
 }
 
 .container{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Search bar display + emoji */
+.search-container{
+    position: relative;
 }
 
 .search-bar{
-    padding: 12px 15px;
+    padding: 15px 20px 15px 45px;
     border: 1px solid var(--border);
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 1rem;
     width: 100%;
-    transition: border 0.2s;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    /* Example taken from w3schools. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235f6368' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 18px;
 }
 
 .search-bar:focus{
     outline: none;
     border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary-light);
 }
 
-.location-controls{
-    display: flex;
-    gap: 10px;
-}
-
-button{
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    font-size: 14.4px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.location-btn{
-    background-color: var(--primary);
-    color: white;
-    flex: 1;
-}
-
-.location-btn:hover{
-    background-color: var(--primary-dark);
-}
-
-.reset-btn{
-    background-color: var(--background);
-    color: var(--text);
-}
-
-.reset-btn:hover{
-    background-color: orangered;
+/* Map Container Styles - Updated */
+#map-container, #map{
+    height: 100%;
+    min-height: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .map-container{
-    margin-top: 20px;
+    flex: 1;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid var(--border);
-}
-
-#map{
-    width: 100%;
-    height: 500px;
+    box-shadow: var(--shadow-sm);
 }
 
 .main-footer{
     text-align: center;
-    padding: 20px;
-    margin: 0 -40px -40px -40px;
-    border-top: 1px solid var(--border);
+    padding: 20px 40px;
     color: var(--text-light);
-    font-size: 14.4px;
-    background: white;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    font-size: 0.9rem;
+    background: var(--white);
+    border-top: 1px solid var(--border);
 }
 
+/* Button styles - making buttons easier to find/use */
+.location-controls{
+    display: flex;
+    gap: 15px;
+}
+
+button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.location-btn{
+    background-color: var(--primary);
+    color: var(--white);
+    flex: 1;
+    box-shadow: var(--shadow-sm);
+}
+
+.location-btn:hover{
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.location-btn:active{
+    transform: translateY(0);
+}
+
+.reset-btn{
+    background-color: var(--white);
+    color: var(--text);
+    border: 1px solid var(--border-dark);
+    box-shadow: var(--shadow-sm);
+}
+
+.reset-btn:hover{
+    background-color: #f8f8f8;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    color: var(--text);
+    border-color: var(--border-dark);
+}
+
+.reset-btn:active{
+    transform: translateY(0);
+}
+
+.location-btn::before{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    /* Emojis in button, taken from w3schools. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.reset-btn::before{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    /* Emojis in button, taken from w3schools. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23202124' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z'/%3E%3Cpath d='M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Footer for contact info. */
 .main-footer a{
     color: var(--primary);
     text-decoration: none;
+    font-weight: 500;
 }
 
 .main-footer a:hover{
