@@ -228,13 +228,18 @@ button{
     background-position: center;
 }
 
-/* Footer for contact info. */
+/* Footer for contact info & authorities */
 .main-footer a{
     color: var(--primary);
     text-decoration: none;
     font-weight: 500;
 }
 
-.main-footer a:hover{
+a.uk-bristol{
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a.contact:hover{
     text-decoration: underline;
 }
